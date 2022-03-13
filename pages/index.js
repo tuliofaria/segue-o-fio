@@ -60,10 +60,10 @@ const Index = () => {
           <textarea
             placeholder='Digite seu conteúdo do fio aqui...'
             {...register('content')}
-            className='w-full h-screen p-4 my-2 border rounded-lg'
+            className='w-full h-screen p-4 my-2 border rounded-lg max-w-6xl'
           ></textarea>
         </div>
-        <div className='flex-1 p-2'>
+        <div className='flex-1 p-2 max-w-2xl'>
           <h2 className='font-bold'>Twits:</h2>
           {twits.map((twit, index) => (
             <Twit

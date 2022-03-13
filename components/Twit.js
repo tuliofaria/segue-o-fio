@@ -17,7 +17,12 @@ const Twit = ({ twit, showCounter = false, current, total }) => {
       onClick={copyToClipboard}
     >
       <IoMdCopy className='opacity-0 absolute top-4 right-4 group-hover:opacity-100' />
-      <pre className='font-sans'>{content}</pre>
+      <p
+        className='font-sans break-words'
+        dangerouslySetInnerHTML={{
+          __html: content?.split('\n').join('<br />')
+        }}
+      />
       <p className='text-right text-sm'>
         {len <= 280 && (
           <span className='text-green-800 bg-green-100 p-1 rounded'>{len}</span>
